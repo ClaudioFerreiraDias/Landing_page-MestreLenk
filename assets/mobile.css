@@ -1,0 +1,829 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F5F5F5;
+    font-family: 'Montserrat'; /* fonte do coprpo do texto */
+    color: #3B3B3B; /* Cor da fonte do conteúdo */
+    margin: 0; /*Retira a margem padrão do body*/
+    padding:0; /*Remove o espaçamento interno padrão do body */
+}
+
+h1 {
+    font-family: 'Montserrat';
+    color: #F5F5F5;
+    font-size: clamp(16px, 1.2vw, 18px);
+    font-weight: 200;
+    margin-bottom: 0;
+}
+h2 {
+   font-family: 'Montserrat';
+    font-weight: 700;
+    color: #3B3B3B;
+    font-size: clamp(22px,1.7vw,32px);
+}
+h3 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #3B3B3B;
+    font-size: clamp(20px,1.5vw,26px); 
+}
+
+h4 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #3B3B3B;
+    font-size: clamp(16px, 1.2vw, 18px);
+}
+
+header {
+    margin: 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 64px; /*Altura do header */
+    line-height: 0;
+    z-index: 9999;
+    background-color: #000000;
+    box-sizing: border-box;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding-top: 64px;
+}
+
+.navBardesktop{
+    display: none;
+}
+
+.navBarmobile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navBarmobile a {
+    width: 44px;
+    height: 44px;
+}
+
+.navBarmobile button{
+    height: 44px;
+    width: 44px;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+.f_menuhamb {
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #F5F5F5;
+    border-radius: 2px;
+}
+
+.navMobile {
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: 0 4px 6px rgba(0, 0,0.1);
+    z-index: 999;
+}
+
+.navMobile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     gap: 12px;
+    padding: 0;
+     margin: 0;
+}
+
+.navMobile li { 
+    width: 100%;
+    list-style: none;
+}
+
+.navMobile a {
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    color: #3B3B3B;
+    font-weight: 500;
+    display: block;
+}
+
+/*classe destinada a JS para abrir o menu */
+.navMobile.aberto{
+    display: flex;
+}
+
+.hero{
+    width: 100%;
+    height: auto;
+    background-image: url(img/desktop/dobra_01_tatuagem_tatuador_mestrelenk_coveruptattoo.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.cont_texthero{
+    width: 90%;
+    height: auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    color: #F5F5F5;
+}
+
+.cont_texthero h2{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: #809373;
+    font-weight: 800;
+}
+
+.cont_texthero h3 {
+    color: #F5F5F5;
+}
+
+.cont_texthero p{
+    margin-bottom: 20%;
+}
+
+.btn_whats {
+    width: 90%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn_whats button {
+    height: 44px;
+    width: 400px;
+    background-color: #809373;
+    border: none;
+    border-radius: 50px;
+    color: #F5F5F5;
+    font-weight: bold;
+}
+
+.barserv {
+    width: 100%;
+    height: 40px;
+    background-color: #809373;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.skills{
+    height: 100%;
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 2vh;
+    padding: 2vh;
+    color: #F5F5F5;
+    animation: moverDireita 30s linear infinite, fadeloop 20s linear infinite;
+}
+
+@keyframes moverDireita {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fadeloop {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+.icon{
+    height: 2vh;
+    width: 2vh;
+    background-image: url(img/icon/Stars.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: cover;
+}
+
+.colortxt{
+    color: #809373;
+}
+
+.porque {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pq_format{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.format01{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.format02{
+    width: 90%;
+    height: auto;
+    text-align: start;
+}
+
+.format02 img{
+    width: 100%;
+    height: auto;
+}
+
+.valid_tbl{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.txt_valid{
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.txt_valid img{
+    width: 100%;
+    height: auto;
+}
+
+.info_tbl{
+    width: 100%;
+    height: auto;
+    background-image: url(img/mobile/tattoo_geek_by_lenktattoo_mobile.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #F5F5F5;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.info_tbl h3{
+    color:#F5F5F5;
+}
+
+.backgroundsobre {
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sobre_lenk{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre_lenk img{
+    width: 111%;
+    height: auto;
+}
+
+.txt_sobrelenk{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    text-align: start;
+    color: #F5F5F5;
+}
+
+.txt_sobrelenk h2{
+    text-align: center;
+    color: #809373;
+}
+
+.background_skill {
+    width: 100%;
+    height: auto;
+    background-color: #809373;
+    display: flex;
+    justify-content: center;
+}
+
+.grid_skill{
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.cont_skill{
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.precess{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backgroundwhite {
+    width: 90%;
+    height: auto;
+}
+.backgroundwhite h2{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: #809373;
+}
+
+.backgroundimg{
+    width: 100%;
+    height: auto;
+    background-image: url(img/desktop/background_como_funciona_o_processo_com_lenk_tattoo.webp);
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.passoapasso{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.passoapasso h3{
+    color: #809373;
+    font-weight: bold;
+    text-align: center;
+}
+
+.comentarios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.format_coment{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classificacao{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #3B3B3B;
+}
+
+.classificacao h5 {
+    text-align: center;
+}
+
+.depoimento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont_stars{
+    margin-top: 10px;
+    height: 20px;
+    width: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.stars{
+    height: 20px;
+    width: 20px;
+    background-image: url(img/icon/estrela.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.galeria{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.format_galeria {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.format_galeria h2{
+    color: #809373;
+}
+
+.grid_galeria{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+}
+
+.grid_galeria img{
+    aspect-ratio: 9/16;
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.grid_galeria2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+}
+
+.grid_galeria2 img{
+    width: 100%;
+    height:auto;
+    object-position: center;
+    display: block;
+}
+
+.grid_galeria3{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+}
+
+.grid_galeria3 img{
+    width: 100%;
+    aspect-ratio: 9/16;
+    height:auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.imagemQH {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagemVP {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagemVP2{
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.imagemHP{
+    grid-column: span 1;
+    grid-row: 1;
+}
+
+.ImagemHG{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagemVG{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagemVG2{
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.linkinst {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: #3B3B3B;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10%;
+}
+
+.cta {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #809373;
+    text-align: center;
+}
+
+.backgroundgreen{
+    width: 90%;
+    height: auto;
+    color: #F5F5F5;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.backgroundgreen h2{
+    color: #F5F5F5;
+}
+
+.background_cta{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.background_cta button {
+    margin-top: 0;
+}
+
+.faq {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.txt_faq{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+summary h2{
+    color: #809373;
+}
+
+details summary{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    cursor: pointer;
+}
+
+details summary::webkit-details-marker{
+    display: none;
+}
+
+details summary::before{
+    content: "►";
+    display: inline-block;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::before{
+    transform: rotate(90deg);
+}
+
+.cont_faq h3{
+    font-weight: bold;
+    color: #809373;
+}
+
+.contato{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.format_cont{
+    width: 90%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5%;
+}
+
+.txt_contat h2{
+    color: #809373;
+}
+
+.google_maps{
+    aspect-ratio: 1/1;
+    width: 80%;
+    border: 4px solid #809373;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.google_maps iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.rdp{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #F5F5F5;
+}
+
+.rdp p{
+    margin-top: 5%;
+    margin-bottom: 40%;
+    text-align: center;
+}
+
+.rdp_format{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 30px;
+}
+
+.cont_rdp{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cont_rdp h3{
+    color: #F5F5F5;
+    font-weight: bold;
+}
+
+.cont_rdp p{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.cont_rdp img{
+    width: 100px;
+    height: 100px;
+}
+
+.site {
+    height: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+.socialmidia{
+    display: flex;
+    gap: 10px;
+}
+
+.socialmidia img {
+    width: 40px;
+    height: 40px;
+}
+
+.ajuda{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.ajuda a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3B3B3B;
+}
+
+.ajuda img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.help{
+    width: 150px;
+    background: #F5F5F5;
+    color: #3B3B3B;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.help.show{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
