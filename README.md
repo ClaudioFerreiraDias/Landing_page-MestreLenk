@@ -8,7 +8,7 @@ Aumentar conversões de leads qualificados para o profissional.
 ### 🎯 Problema
 <div>
     <ul>
-        <li>Landpage antiga atraia muitos leads, mão não qualificados.</li>
+        <li>Landpage antiga atraia muitos leads não qualificados.</li>
         <li>Taxa de conversão baixa.</li>
         <li>Público alvo fora do perfil desejado.</li>
     </ul>
@@ -16,8 +16,8 @@ Aumentar conversões de leads qualificados para o profissional.
 
 ## ❌ Impactos Negativos da Landpage Antiga
 Embora houve quantidade significativa de leads, a  maioria não correspondia ao público alvo desejado, isso gerava desperdício de tempo em negociação e raramente se convertia em clientes reais.<br>
-Problemas no marketing o exesso de leads não refletia em agendamentos efetivos, o que gerava frustração e dificulde com o crescimento do negócio.<br>
-Para um anuncio do google a página tinha muitas requisições e js o que afetava o desempenho da página e rankeamento no google.
+Problemas no marketing o excesso de leads não refletia em agendamentos efetivos, o que gerava frustração e dificulde com o crescimento do negócio.<br>
+Para um anúncio do google a página tinha muitas requisições em js o que afetava o desempenho da página e rankeamento no google.
 
 ## 🚀 Solução
 <div>
@@ -51,4 +51,4 @@ Desde a primeira versão, a nova landing page trouxe melhorias significativas pa
   <img alt="claudio_ilustrator" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" />          
 </div>
 <br>
-👨‍💻 **Autor:** Claudio
+👨‍💻 Autor: Claudio
